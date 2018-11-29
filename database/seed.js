@@ -49,7 +49,8 @@ for (let i = 1; i < 101; i++) {
   ];
 
   let room = {
-    id: i, user: faker.name.findName(),
+    id: i,
+    user: faker.name.findName(),
     title: faker.lorem.word(),
     type: faker.random.arrayElement(
       ['House', 'Tiny House', 'Apartment', 'Private Room', 'Shared Room', 'RV']
