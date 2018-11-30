@@ -10,7 +10,7 @@ let roomSchema = mongoose.Schema({
   superhost: Boolean,
   descriptions: Array,
   amenities: Array,
-  rooms: Array
+  sleepingArrangements: Array
 });
 
 const RoomModel = mongoose.model('Room', roomSchema);

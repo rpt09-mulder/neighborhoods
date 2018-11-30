@@ -28,7 +28,7 @@ for (let i = 1; i < 101; i++) {
     }
   ];
 
-  let fakeRooms = [
+  let fakeSleeping = [
     {
       typeOfRoom: 'Bedroom',
       furniture: faker.random.arrayElement([
@@ -48,7 +48,7 @@ for (let i = 1; i < 101; i++) {
     }
   ];
 
-  let room = {
+  let roomDetail = {
     id: i,
     user: faker.name.findName(),
     title: faker.lorem.word(),
@@ -60,8 +60,14 @@ for (let i = 1; i < 101; i++) {
     superhost: faker.random.boolean(),
     descriptions: fakeDescriptions,
     amenities: ['Kitchen', 'Iron', 'Free parking on premises', 'Wifi', 'Hangers', 'Laptop friendly workspace'],
-    rooms: fakeRooms
+    sleepingArrangements: fakeSleeping
   };
 
-  Rooms.insertOne(room);
+  Rooms.insertOne(roomDetail, (err, rooms) => {
+    if (err) {
+      console.log('error adding Room detail', err);
+    } else {
+      console.log('Room added');
+    }
+  });
 }
