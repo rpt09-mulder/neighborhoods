@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "babel-core": "^6.26.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.14",
     "react": "^16.6.3",
