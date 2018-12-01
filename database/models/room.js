@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rooms');
 
 let roomSchema = mongoose.Schema({
   id: {type: Number, unique: true},
@@ -20,6 +21,7 @@ const findAll = (callback) => {
 };
 
 const findByID = (id, callback) => {
+  console.log('were in find by id and this is id', id);
   RoomModel.find({id: id}, callback);
 };
 
