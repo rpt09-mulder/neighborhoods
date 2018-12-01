@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h1>This is the Rooms component</h1>
@@ -15,4 +14,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;
