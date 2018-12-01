@@ -21,7 +21,6 @@ const findAll = (callback) => {
 };
 
 const findByID = (id, callback) => {
-  console.log('were in find by id and this is id', id);
   RoomModel.find({id: id}, callback);
 };
 
