@@ -28,8 +28,13 @@ const insertOne = (room, callback) => {
   RoomModel.create(room, callback);
 };
 
+const disconnect = () => {
+  mongoose.disconnect();
+};
+
 module.exports = {
   findAll,
   findByID,
-  insertOne
+  insertOne,
+  disconnect
 };
