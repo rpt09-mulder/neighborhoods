@@ -16,14 +16,16 @@ describe('test the helper functions for the Room Model', () => {
 
     test('insertOne should not insert a record unless it has an id', () => {
       Rooms.insertOne(badDataExample, (err, example) => {
+        if (err) {
+        }
         expect(err).toBeDefined();
       });
 
       Rooms.insertOne(goodDataExample, (err, example) => {
+        if (err) {
+        }
         expect(err).toBeUndefined();
       });
     });
-
-
   });
 });
