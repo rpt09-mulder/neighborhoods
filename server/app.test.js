@@ -50,7 +50,6 @@ describe('server', () => {
 
     test('it should only return one response', (done) => {
       request.get('/rooms/1').then((response) => {
-        console.log('response.body', response.body);
         expect(response.body.data.length).toBe(1);
         done();
       });

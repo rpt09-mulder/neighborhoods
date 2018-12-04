@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rooms');
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/roomstest');
 // let db = mongoose.connection;
 // db.on('error', (err) => {
 //   console.log('error connecting', err);
@@ -26,26 +26,15 @@ let roomSchema = mongoose.Schema({
 const RoomModel = mongoose.model('Room', roomSchema);
 
 const findAll = (callback) => {
-  RoomModel.find({}, () => {
-    callback;
-    // mongoose.disconnect();
-  });
+  RoomModel.find({}, callback);
 };
 
 const findByID = (id, callback) => {
-  console.log('finding things', id, callback);
-  RoomModel.find({id: id}, () => {
-    console.log('we call back now');
-    callback;
-    // mongoose.disconnect();
-  });
+  RoomModel.find({id: id}, callback);
 };
 
 const insertOne = (room, callback) => {
-  RoomModel.create(room, () => {
-    callback;
-    // mongoose.disconnect();
-  });
+  RoomModel.create(room, callback);
 };
 
 module.exports = {
