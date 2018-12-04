@@ -1,14 +1,4 @@
 const mongoose = require('mongoose');
-// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/roomstest');
-// let db = mongoose.connection;
-// db.on('error', (err) => {
-//   console.log('error connecting', err);
-// });
-// db.once('open', () => {
-//   console.log('mongoose connected');
-// });
-
-// mongoose.set('debug', true);
 
 let roomSchema = mongoose.Schema({
   id: {type: Number, unique: true},
