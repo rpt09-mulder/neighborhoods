@@ -29,3 +29,30 @@ describe('test the helper functions for the Room Model', () => {
     });
   });
 });
+
+// const app = require('./app.js');
+// const mongoose = require('mongoose');
+// const supertest = require('supertest');
+// const chai = require('chai');
+// const expect = chai.expect;
+
+// describe('server tests', () => {
+//   before((done) => {
+//     mongoose.connect('mongodb://localhost/roomstest');
+//     const db = mongoose.connection;
+//     db.on('error', console.error.bind(console, 'connection error'));
+//     db.once('open', function() {
+//       console.log('connected to test database!');
+//       done();
+//     });
+//   });
+
+
+
+//   after((done) => {
+//     mongoose.connection.db.dropDatabase(() => {
+//       mongoose.connection.close(done);
+//     });
+//   });
+
+// });
