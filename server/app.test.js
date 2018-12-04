@@ -38,9 +38,9 @@ describe('server', () => {
   });
 
   describe('requests to /rooms/:id', () => {
-    test('it should return JSON with a data key for rooms/1', (done) => {
+    test('it should return JSON with a \'data\' key for rooms/1', (done) => {
       Room.findByID = jest.fn((id, cb) => {
-        cb(null, {id: 'this is a test'});
+        cb(null, [{id: 'this is a test'}]);
       });
       request.get('/rooms/1').then((response) => {
         expect(response.body).toHaveProperty('data');
@@ -48,7 +48,7 @@ describe('server', () => {
       });
     });
 
-    test('it should only return one response', (done) => {
+    test('it should only return a single item inside the data key', (done) => {
       request.get('/rooms/1').then((response) => {
         expect(response.body.data.length).toBe(1);
         done();

@@ -14,7 +14,7 @@ app.get('/rooms/:id', (req, res) => {
     if (err) {
       res.status(404).send(`ID ${req.params.id} does not exist in database`);
     } else {
-      res.json({data: [roomInfo]});
+      res.json({data: roomInfo});
     }
   });
 });
