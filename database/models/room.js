@@ -17,24 +17,28 @@ let roomSchema = mongoose.Schema({
 const RoomModel = mongoose.model('Room', roomSchema);
 
 const findAll = (callback) => {
-  RoomModel.find({}, callback);
+  RoomModel.find({}, () => {
+    callback;
+    mongoose.disconnect();
+  });
 };
 
 const findByID = (id, callback) => {
-  RoomModel.find({id: id}, callback);
+  RoomModel.find({id: id}, () => {
+    callback;
+    mongoose.disconnect();
+  });
 };
 
 const insertOne = (room, callback) => {
-  RoomModel.create(room, callback);
-};
-
-const disconnect = () => {
-  mongoose.disconnect();
+  RoomModel.create(room, () => {
+    callback;
+    mongoose.disconnect();
+  });
 };
 
 module.exports = {
   findAll,
   findByID,
-  insertOne,
-  disconnect
+  insertOne
 };
