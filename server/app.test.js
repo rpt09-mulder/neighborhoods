@@ -1,16 +1,9 @@
 const supertest = require('supertest');
 const app = require('./app.js');
-// const mongoose = require('mongoose');
 const request = supertest(app);
-jest.mock('../database/models/room.js');
-const Room = require('../database/models/room.js');
-// beforeAll(() => {
-//   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rooms');
-// });
 
-// afterAll((done)=> {
-//   mongoose.disconnect(done);
-// });
+jest.mock('../database/models/room.js');
+const {findByID} = require('../database/models/room.js');
 
 describe('server', () => {
 
@@ -39,7 +32,7 @@ describe('server', () => {
 
   describe('requests to /rooms/:id', () => {
     test('it should return JSON with a \'data\' key for route \'rooms/1\'', (done) => {
-      Room.findByID = jest.fn((id, cb) => {
+      findByID.mockImplementation((id, cb) => {
         cb(null, [{id: 'this is a test'}]);
       });
       request.get('/rooms/1').then((response) => {
@@ -56,7 +49,7 @@ describe('server', () => {
     });
 
     test('it should return 404 for an invalid endpoint', (done) => {
-      Room.findByID = jest.fn((id, cb) => {
+      findByID.mockImplementation((id, cb) => {
         cb('error', null);
       });
       request.get('/rooms/1').then((response) => {
@@ -66,9 +59,6 @@ describe('server', () => {
     });
 
     test('response message for the invalid message should contain the id', (done) => {
-      Room.findByID = jest.fn((id, cb) => {
-        cb('error', null);
-      });
       request.get('/rooms/1').then((response) => {
         expect(response.text).toBe('ID 1 does not exist in database');
         done();
@@ -76,5 +66,3 @@ describe('server', () => {
     });
   });
 });
-
-
