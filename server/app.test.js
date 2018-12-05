@@ -38,7 +38,7 @@ describe('server', () => {
   });
 
   describe('requests to /rooms/:id', () => {
-    test('it should return JSON with a \'data\' key for rooms/1', (done) => {
+    test('it should return JSON with a \'data\' key for route \'rooms/1\'', (done) => {
       Room.findByID = jest.fn((id, cb) => {
         cb(null, [{id: 'this is a test'}]);
       });
