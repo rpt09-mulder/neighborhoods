@@ -15,10 +15,6 @@ let roomSchema = mongoose.Schema({
 
 const RoomModel = mongoose.model('Room', roomSchema);
 
-const findAll = (callback) => {
-  RoomModel.find({}, callback);
-};
-
 const findByID = (id, callback) => {
   RoomModel.find({id: id}, callback);
 };
