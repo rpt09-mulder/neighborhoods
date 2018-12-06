@@ -24,7 +24,6 @@ const insertOne = (room, callback) => {
 };
 
 module.exports = {
-  findAll,
   findByID,
   insertOne
 };
