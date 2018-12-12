@@ -18,8 +18,11 @@ class App extends React.Component {
     // fetch('http://localhost:3001/1/details').then((res) => {
     //   console.log('data', res.body);
     // });
-    $.get('http://localhost:3001/1/details', (data) => {
+    $.get('http://localhost:3001/details/1', (data) => {
       console.log('this is data', data.data[0]);
+      this.setState({
+        data: data.data[0]
+      });
     });
   }
 
