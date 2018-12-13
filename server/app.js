@@ -2,11 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Room = require('../database/models/room.js');
 const morgan = require('morgan');
-
+const cors = require('cors');
 
 let app = express();
 
 app.use(morgan('dev'));
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());

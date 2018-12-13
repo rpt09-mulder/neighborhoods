@@ -1,7 +1,5 @@
 import React from 'react';
-// import request from 'request';
-// const request = require('request');
-import $ from 'jquery';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,29 +10,26 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // request('http://localhost:3001/1/details', (error, response) => {
-    //   console.log('response.body', response);
-    // });
-    // fetch('http://localhost:3001/1/details').then((res) => {
-    //   console.log('data', res.body);
-    // });
-    $.get('http://localhost:3001/details/1', (data) => {
-      console.log('this is data', data.data[0]);
+    // console.log('window.location', window.location);
+    // console.log('window.location.pathname:', window.location.pathname);
+    axios.get(`http://localhost:3001/details${window.location.pathname}`).then(res => {
+      // console.log('axios response', res.data.data[0]);
       this.setState({
-        data: data.data[0]
+        data: res.data.data[0]
       });
     });
   }
 
   render() {
+    let { descriptions, amenities, sleepingArrangements, user, title, type, city } = this.state.data;
     return (
       <div>
         <h1>This is the Rooms component</h1>
         <div>
-          this is the data we got back:
-          {console.log(this.state.data)}
-          {this.state.data.id}
-
+          {console.log('dataaaa', this.state.data)}
+          <h5>{type}</h5>
+          <h3>{title}</h3>
+          <h5>{city}</h5>
         </div>
       </div>
     );

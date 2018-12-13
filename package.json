@@ -16,12 +16,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "jquery": "^3.3.1",
     "mongoose": "^5.3.14",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "request": "^2.88.0"
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
