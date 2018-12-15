@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import Heading from '../components/Heading.jsx';
+import Heading from './Heading.jsx';
+import Summary from './Summary.jsx';
 
 class App extends React.Component {
   constructor(props) {
