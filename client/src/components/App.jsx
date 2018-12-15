@@ -14,6 +14,7 @@ class App extends React.Component {
   componentDidMount() {
     axios.get(`http://localhost:3001/details${window.location.pathname}`).then(res => {
       this.setState({
+        // redundancy because axios returns data through res.data
         data: res.data.data[0]
       });
     });
@@ -31,6 +32,8 @@ class App extends React.Component {
         />
         <Summary
           sleepingArrangements = {sleepingArrangements}
+          type = {type}
+          user = {user}
           superhost = {superhost}
           selfCheckin = {selfCheckin}
         />
