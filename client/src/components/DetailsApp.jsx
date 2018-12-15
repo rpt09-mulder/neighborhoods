@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Heading from '../components/Heading.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,15 +19,20 @@ class App extends React.Component {
   }
 
   render() {
-    let { descriptions, amenities, sleepingArrangements, user, title, type, city } = this.state.data;
+    let {type, title, city, user, sleepingArrangements, selfCheckin, superhost} = this.state.data;
     return (
       <div>
-        <h1>This is the Rooms component</h1>
-        <div>
-          <h5>{type}</h5>
-          <h3>{title}</h3>
-          <h5>{city}</h5>
-        </div>
+        <Heading
+          type = {type}
+          title = {title}
+          city = {city}
+          user = {user}
+        />
+        <Summary
+          sleepingArrangements = {sleepingArrangements}
+          superhost = {superhost}
+          selfCheckin = {selfCheckin}
+        />
       </div>
     );
   }
