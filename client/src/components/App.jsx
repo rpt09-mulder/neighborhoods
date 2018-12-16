@@ -12,7 +12,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3001/details${window.location.pathname}`).then(res => {
+    axios.get(`http://rooms.4gk2mkr3wk.us-west-2.elasticbeanstalk.com/details${window.location.pathname}`).then(res => {
       this.setState({
         // redundancy because axios returns data through res.data
         data: res.data.data[0]
