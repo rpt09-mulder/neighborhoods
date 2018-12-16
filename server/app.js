@@ -28,7 +28,7 @@ app.get('/details/:id', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/../client/dist/fallback.html'));
+  res.sendFile('fallback.html');
 });
 
 module.exports = app;
