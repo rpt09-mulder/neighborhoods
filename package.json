@@ -14,7 +14,7 @@
     "test-jest": "jest",
     "build": "webpack",
     "start": "node server/server.js",
-    "aws": "npm install && webpack && node server/server.js"
+    "aws": "webpack && node server/server.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
