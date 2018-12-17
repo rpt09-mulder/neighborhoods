@@ -12,11 +12,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('location', window.location.pathname === '/');
-    let id;
-    if (window.location.pathname === '/') {
-      id = '/1';
-    } else {
+    let id = '/1';
+    if (window.location.pathname !== '/') {
       id = window.location.pathname;
     }
 
