@@ -1,6 +1,7 @@
 import React from 'react';
 import SleepSummary from './SleepSummary.jsx';
-
+import Superhost from './Superhost.jsx';
+import SelfCheckin from './SelfCheckin.jsx';
 
 const Summary = ({sleepingArrangements, type, user, selfCheckin, superhost}) => {
   return (
@@ -9,21 +10,8 @@ const Summary = ({sleepingArrangements, type, user, selfCheckin, superhost}) => 
         sleepingArrangements = {sleepingArrangements}
         type = {type}
       />
-
-      {/* <div>
-        {superhost &&
-          <div>
-            <h4>
-              {user} is a Superhost
-            </h4>
-            <div>
-              Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.
-            </div>
-          </div>
-        }
-      </div>
-      <div>
-      </div> */}
+      {superhost && <Superhost user={user} />}
+      {selfCheckin && <SelfCheckin />}
     </div>
   );
 };
