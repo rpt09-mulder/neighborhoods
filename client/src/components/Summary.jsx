@@ -5,10 +5,10 @@ import SleepSummary from './SleepSummary.jsx';
 const Summary = ({sleepingArrangements, type, user, selfCheckin, superhost}) => {
   return (
     <div>
-      {sleepingArrangements && <SleepSummary
+      <SleepSummary
         sleepingArrangements = {sleepingArrangements}
         type = {type}
-      />}
+      />
 
       {/* <div>
         {superhost &&

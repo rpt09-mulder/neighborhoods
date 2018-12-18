@@ -2,12 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import Heading from './Heading.jsx';
 import Summary from './Summary.jsx';
+import Details from './Details.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {}
+      data: null
     };
   }
 
@@ -26,24 +27,31 @@ class App extends React.Component {
   }
 
   render() {
-    let {type, title, city, user, sleepingArrangements, selfCheckin, superhost} = this.state.data;
-    return (
-      <div>
-        <Heading
-          type = {type}
-          title = {title}
-          city = {city}
-          user = {user}
-        />
-        <Summary
-          sleepingArrangements = {sleepingArrangements}
-          type = {type}
-          user = {user}
-          superhost = {superhost}
-          selfCheckin = {selfCheckin}
-        />
-      </div>
-    );
+    if (this.state.data !== null) {
+      let {type, title, city, user, sleepingArrangements, selfCheckin, superhost, descriptions} = this.state.data;
+      return (
+        <div>
+          <Heading
+            type={type}
+            title={title}
+            city={city}
+            user={user}
+          />
+          <Summary
+            sleepingArrangements={sleepingArrangements}
+            type={type}
+            user={user}
+            superhost={superhost}
+            selfCheckin={selfCheckin}
+          />
+          <Details
+            descriptions={descriptions}
+          />
+        </div>
+      );
+    } else {
+      return <Heading />;
+    }
   }
 }
 
