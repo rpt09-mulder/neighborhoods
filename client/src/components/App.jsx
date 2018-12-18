@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     if (this.state.data !== null) {
       let {type, title, city, user, sleepingArrangements, selfCheckin, superhost, descriptions, amenities} = this.state.data;
-      console.log('amenities', amenities);
+
       return (
         <div>
           <Heading
