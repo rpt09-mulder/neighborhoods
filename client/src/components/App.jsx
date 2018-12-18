@@ -3,6 +3,7 @@ import axios from 'axios';
 import Heading from './Heading.jsx';
 import Summary from './Summary.jsx';
 import Details from './Details.jsx';
+import Amenities from './Amenities.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,8 @@ class App extends React.Component {
 
   render() {
     if (this.state.data !== null) {
-      let {type, title, city, user, sleepingArrangements, selfCheckin, superhost, descriptions} = this.state.data;
+      let {type, title, city, user, sleepingArrangements, selfCheckin, superhost, descriptions, amenities} = this.state.data;
+      console.log('amenities', amenities);
       return (
         <div>
           <Heading
@@ -46,6 +48,9 @@ class App extends React.Component {
           />
           <Details
             descriptions={descriptions}
+          />
+          <Amenities
+            amenities={amenities}
           />
         </div>
       );
