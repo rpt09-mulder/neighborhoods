@@ -1,16 +1,20 @@
 import React from 'react';
-import DetailsItem from './DetailsItem.jsx';
+import DetailsItem from './DetailsItem';
 
-const Details = ({descriptions}) => (
+const Details = ({ descriptions }) => (
   <div>
-    {descriptions.map((description, index) =>
+    {descriptions.map(description => (
       <DetailsItem
         description={description}
-        key ={index}
+        key={description}
       />
-    )
+    ))
     }
   </div>
 );
+
+Details.propTypes = {
+  descriptions: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 export default Details;
