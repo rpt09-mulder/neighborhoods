@@ -7,7 +7,7 @@ const Details = ({ descriptions }) => (
     {descriptions.map(description => (
       <DetailsItem
         description={description}
-        key={description}
+        key={description.title}
       />
     ))
     }
@@ -15,7 +15,7 @@ const Details = ({ descriptions }) => (
 );
 
 Details.propTypes = {
-  descriptions: PropTypes.arrayOf(PropTypes.string).isRequired
+  descriptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default Details;
