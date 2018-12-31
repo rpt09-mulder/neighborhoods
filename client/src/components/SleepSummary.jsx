@@ -18,17 +18,17 @@ const SleepSummary = ({ sleepingArrangements, type }) => {
       <div>
         <span>
           {guests}
-          guests
+          &nbsp;guests
         </span>
         <span>*</span>
         <span>
-          1
+          1&nbsp;
           {sleepingArrangements[0].typeOfRoom}
         </span>
         <span>*</span>
         <span>
           {sleepingArrangements[0].furniture.qty}
-          {sleepingArrangements[0].furniture.qty === 1 ? 'Bed' : 'Beds'}
+          {sleepingArrangements[0].furniture.qty === 1 ? ' Bed' : ' Beds'}
         </span>
         <span>*</span>
         <span>1 Bath</span>
