@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Room = require('../database/models/room.js');
-const morgan = require('morgan');
-const cors = require('cors');
 const path = require('path');
+const cors = require('cors');
+const morgan = require('morgan');
+const Room = require('../database/models/room.js');
 
 const app = express();
 

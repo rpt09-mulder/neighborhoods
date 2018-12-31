@@ -8,6 +8,7 @@ module.exports = {
     ],
     "rules": {
         "comma-dangle": ["error", "never"],
-        "no-undef": 0
+        "no-undef": 0,
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
     }
 }
