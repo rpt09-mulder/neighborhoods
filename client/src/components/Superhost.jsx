@@ -5,7 +5,7 @@ const Superhost = ({ user }) => (
   <div>
     <h4>
       {user}
-      is a Superhost
+      &nbsp;is a Superhost
     </h4>
     <div>
       Superhosts are experienced,
