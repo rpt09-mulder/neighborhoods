@@ -9,7 +9,7 @@ const Superhost = ({ user }) => (
     </h4>
     <div>
       Superhosts are experienced,
-       highly rated hosts who are committed to providing great stays for guests.
+      highly rated hosts who are committed to providing great stays for guests.
     </div>
   </div>
 );
