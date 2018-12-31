@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const DetailsItem = ({ description: { title, text } }) => (
   <div>

@@ -66,7 +66,13 @@ class App extends React.Component {
         </div>
       );
     }
-    return <Heading />;
+    return (
+      <Heading
+        type="Default Type"
+        title="Default Title"
+        city="Default City"
+      />
+    );
   }
 }
 

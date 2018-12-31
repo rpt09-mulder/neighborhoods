@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const SleepSummary = ({ sleepingArrangements, type }) => {
   let guests = 0;

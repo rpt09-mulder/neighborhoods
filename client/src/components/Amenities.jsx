@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AmenitiesItem from './AmenitiesItem';
 
 const Amenities = ({ amenities }) => (
