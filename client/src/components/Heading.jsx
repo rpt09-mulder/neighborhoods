@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../styles/Heading.css';
 
 const Heading = ({ type, title, city }) => (
-  <div>
+  <div id="heading">
     <div>{type}</div>
     <div>{title}</div>
     <div>{city}</div>

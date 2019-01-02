@@ -14,7 +14,6 @@ const SleepSummary = ({ sleepingArrangements, type }) => {
 
   return (
     <div>
-      <div>{type}</div>
       <div>
         <span>
           {guests}
