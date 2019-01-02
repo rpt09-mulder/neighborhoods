@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../styles/SleepSummary.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,22 +19,19 @@ const SleepSummary = ({ sleepingArrangements, type }) => {
     <div>
       <div><FontAwesomeIcon icon={faHome} />{type}</div>
       <div>
-        <span>
+        <span className="item">
           {guests}
           &nbsp;guests
         </span>
-        <span>*</span>
-        <span>
+        <span className="item">
           1&nbsp;
           {sleepingArrangements[0].typeOfRoom}
         </span>
-        <span>*</span>
-        <span>
+        <span className="item">
           {sleepingArrangements[0].furniture.qty}
           {sleepingArrangements[0].furniture.qty === 1 ? ' Bed' : ' Beds'}
         </span>
-        <span>*</span>
-        <span>1 Bath</span>
+        <span className="item">1 Bath</span>
       </div>
     </div>
   );
