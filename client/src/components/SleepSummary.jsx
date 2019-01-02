@@ -14,6 +14,7 @@ const SleepSummary = ({ sleepingArrangements, type }) => {
 
   return (
     <div>
+      <div><i class="fas fa-home"></i></div>
       <div>
         <span>
           {guests}
