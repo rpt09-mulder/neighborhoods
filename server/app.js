@@ -27,12 +27,12 @@ app.get('/details/:id', (req, res) => {
   });
 });
 
-app.get('/details/:id', (req, res) => {
+app.get('/users/:id', (req, res) => {
   Room.findByID(req.params.id, (err, roomInfo) => {
     if (err) {
       res.status(404).json({ error: `ID ${req.params.id} does not exist in database` });
     } else {
-      const {id, user, avatar} = roomInfo;
+      const {id, user, avatar} = roomInfo[0];
       const userInfo = {
         id,
         user,
