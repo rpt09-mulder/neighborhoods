@@ -25,7 +25,7 @@ class Details extends React.Component {
     const { descriptions } = this.props;
     if (!isClicked) {
       return (
-        <div>
+        <div className="details">
           <DetailsItem description={descriptions[0]} />
           <br />
           <div className="readBtn" onClick={this.handleReadMore}>
