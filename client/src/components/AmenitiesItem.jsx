@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "../../styles/AmenitiesItem.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faSuitcase, faParking, faWifi, faWarehouse, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,9 +15,11 @@ const AmenitiesItem = ({ amenity }) => {
   }
 
   return (
-  <div>
+  <div className="column">
     <FontAwesomeIcon icon={iconGuide[amenity]} />
-    {amenity}
+    <span className="amenity">
+      {amenity}
+    </span>
   </div>
   );
 };
