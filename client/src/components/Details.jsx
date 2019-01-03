@@ -35,7 +35,7 @@ class Details extends React.Component {
       );
     }
     return (
-      <div>
+      <div className="details">
         {descriptions.map(description => (
           <DetailsItem
             description={description}
