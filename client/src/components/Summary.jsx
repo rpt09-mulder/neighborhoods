@@ -14,7 +14,9 @@ const Summary = ({
     />
     {selfCheckin && <SelfCheckin />}
     {superhost && <Superhost user={user} />}
+    <div className="line-break"></div>
   </div>
+
 );
 
 

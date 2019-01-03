@@ -31,6 +31,7 @@ class Details extends React.Component {
           <div className="readBtn" onClick={this.handleReadMore}>
             Read More about the space <FontAwesomeIcon icon={faChevronDown} />
           </div>
+          <div className="line-break"></div>
         </div>
       );
     }
@@ -47,6 +48,7 @@ class Details extends React.Component {
         <div className="readBtn" onClick={this.handleReadMore}>
           Hide <FontAwesomeIcon icon={faChevronUp} />
         </div>
+        <div className="line-break"></div>
       </div>
     );
   }
