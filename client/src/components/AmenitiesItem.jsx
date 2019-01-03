@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "../../styles/AmenitiesItem.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faSuitcase, faParking, faWifi, faWarehouse, faLaptop } from '@fortawesome/free-solid-svg-icons';
+import "../../styles/AmenitiesItem.css"
 
 const AmenitiesItem = ({ amenity }) => {
   const iconGuide = {
