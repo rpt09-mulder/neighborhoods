@@ -5,7 +5,7 @@ import '../../styles/Amenities.css';
 
 const Amenities = ({ amenities }) => (
   <div>
-    <h3>Amenities</h3>
+    <div className="header">Amenities</div>
     <div className="row">
       {amenities.map(amenity => (
         <AmenitiesItem

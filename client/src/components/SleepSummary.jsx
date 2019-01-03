@@ -17,7 +17,7 @@ const SleepSummary = ({ sleepingArrangements, type }) => {
 
   return (
     <div>
-      <div><FontAwesomeIcon icon={faHome} />{type}</div>
+      <div className="header"><FontAwesomeIcon icon={faHome} />{type}</div>
       <div>
         <span className="item">
           {guests}
