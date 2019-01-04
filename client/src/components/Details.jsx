@@ -28,7 +28,7 @@ class Details extends React.Component {
         <div className="details">
           <DetailsItem description={descriptions[0]} />
           <br />
-          <div className="readBtn" onClick={this.handleReadMore}>
+          <div className="read-btn" onClick={this.handleReadMore}>
             Read More about the space <FontAwesomeIcon icon={faChevronDown} />
           </div>
           <div className="line-break"></div>
@@ -45,7 +45,7 @@ class Details extends React.Component {
         ))
         }
         <br />
-        <div className="readBtn" onClick={this.handleReadMore}>
+        <div className="read-btn" onClick={this.handleReadMore}>
           Hide <FontAwesomeIcon icon={faChevronUp} />
         </div>
         <div className="line-break"></div>
