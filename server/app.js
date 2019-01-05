@@ -18,8 +18,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '/../client/dist'), {maxAge: 31557600000}));
-app.use('/:id', express.static(path.join(__dirname, '/../client/dist')));
+app.use(express.static(path.join(__dirname, '/../client/dist'), {maxAge: '1y'}));
+app.use('/:id', express.static(path.join(__dirname, '/../client/dist'), {maxAge: '1y'}));
 
 app.get('/details/:id', (req, res) => {
   Room.findByID(req.params.id, (err, roomInfo) => {
