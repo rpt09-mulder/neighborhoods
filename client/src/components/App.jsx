@@ -74,11 +74,7 @@ class App extends React.Component {
       );
     }
     return (
-      <Heading
-        type="Default Type"
-        title="Default Title"
-        city="Default City"
-      />
+      <div>Loading...</div>
     );
   }
 }
