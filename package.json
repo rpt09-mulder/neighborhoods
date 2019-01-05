@@ -12,7 +12,7 @@
     "server-dev": "NODE_ENV=development nodemon server/server.js",
     "seed-database": "node ./database/seed.js",
     "test-jest": "jest",
-    "build": "webpack",
+    "build": "webpack -p",
     "start": "node server/server.js"
   },
   "dependencies": {
