@@ -13,8 +13,7 @@
     "seed-database": "node ./database/seed.js",
     "test-jest": "jest",
     "build": "webpack",
-    "start": "node server/server.js",
-    "aws": "webpack && node server/server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
