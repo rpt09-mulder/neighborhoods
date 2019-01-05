@@ -7,7 +7,11 @@ const Room = require('../database/models/room.js');
 
 const app = express();
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === "production") {
+  app.use(morgan('tiny'));
+} else {
+  app.use(morgan('dev'));
+}
 
 app.use(cors());
 
