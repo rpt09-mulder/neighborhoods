@@ -1,28 +1,37 @@
 # Project Name
 
-> Project description
+> Rooms component for AirBnB-Clone
 
 ## Related Projects
-  - https://github.com/rpt09-mulder/gallery
-  - https://github.com/rpt09-mulder/booking
-  - https://github.com/rpt09-mulder/reviews
+  - [Proxy with all components running side-by-side](https://github.com/rpt09-mulder/proxy-allen)
+  - [Rooms (Current Component)](https://github.com/rpt09-mulder/rooms)
+  - [Gallery](https://github.com/rpt09-mulder/gallery)
+  - [Booking](https://github.com/rpt09-mulder/booking)
+  - [Reviews](https://github.com/rpt09-mulder/reviews)
 
 ## Table of Contents
-
 1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+2. [Requirements](#requirements)
+3. [Development](#development)
 
 ## Usage
 
-> Some usage instructions
+**Installation for _Development_**
+
+After cloning the project, install all required dependencies by running
+```
+npm install
+```
+
+Next, if you haven't already, start your MongoDB service then seed the databse by running
+```
+npm run seed-database
+```
+
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
+- Node v10.12.0
+- MongoDB v4.0.3
 
 ## Development
 
