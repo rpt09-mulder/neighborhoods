@@ -37,22 +37,22 @@ If the above link does not work, please get in contact with me and I can launch 
 ### Installation for _Development_
 
 After cloning the project, go to the root directory then install all required dependencies by running
-```
+```sh
 npm install
 ```
 
 If you haven't already, start your MongoDB service then seed the databse by running
-```
+```sh
 npm run seed-database
 ```
 
 Build the webpack bundle by running
-```
+```sh
 npm run react-dev
 ```
 
 Wait for the build to complete then start the server by running
-```
+```sh
 npm run server-dev
 ```
 and finally, on your browser go to http://localhost:3001
