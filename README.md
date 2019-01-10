@@ -27,7 +27,7 @@
 ## Live Example
 A live example can be found [here](http://rooms.4gk2mkr3wk.us-west-2.elasticbeanstalk.com/)
 
-If the above link does not work, please get in contact with you and I can start an EBS instance for you.
+If the above link does not work, please get in contact with me and I can launch an EBS instance for you to explore.
 
 ## Requirements
 - Node v10.12.0
