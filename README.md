@@ -3,7 +3,7 @@
 > Rooms component for AirBnB-Clone
 
 ## Related Projects
-  [[Proxy]](https://github.com/rpt09-mulder/proxy-allen) with all components running side-by-side
+  [[Proxy]](https://github.com/rpt09-mulder/proxy-allen) with all components running together
 
 
   - [Rooms (Current Component)](https://github.com/rpt09-mulder/rooms)
@@ -24,6 +24,8 @@
 
 
 ## Usage
+data sample
+
 
 ## Live Example
 A live example can be found [here](http://rooms.4gk2mkr3wk.us-west-2.elasticbeanstalk.com/)
@@ -33,6 +35,7 @@ If the above link does not work, please get in contact with me and I can launch 
 ## Requirements
 - Node v10.12.0
 - MongoDB v4.0.3
+- NPM
 
 ## Style Guide
 
@@ -74,4 +77,4 @@ Each API route requires an ID
 
 ## Development
 
-
+<!--  -->
