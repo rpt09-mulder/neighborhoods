@@ -15,6 +15,7 @@
 1. [Usage](#Usage)
 1. [Live Example](#Live-Example)
 1. [Requirements](#Requirements)
+1. [Style Guide](#Style-Guide)
 1. [Installation](#Installation)
     1. [Installaction for Development](#Installation-for-development)
     2. [Installation for Production](#Installation-for-development)
@@ -32,6 +33,10 @@ If the above link does not work, please get in contact with me and I can launch 
 ## Requirements
 - Node v10.12.0
 - MongoDB v4.0.3
+
+## Style Guide
+
+Refer to the [AirBnb Style Guide](https://github.com/airbnb/javascript).
 
 ## Installation
 ### Installation for _Development_
