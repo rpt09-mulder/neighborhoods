@@ -11,36 +11,50 @@
 
 ## Table of Contents
 1. [Usage](#Usage)
-2. [Requirements](#requirements)
-3. [Development](#development)
+1. [Requirements](#Requirements)
+1. [Installation](#Installation)
+1. [API Routes](#API-Routes)
+1. [Development](#Development)
+
 
 ## Usage
-
-**Installation for _Development_**
-
-After cloning the project, install all required dependencies by running
-```
-npm install
-```
-
-Next, if you haven't already, start your MongoDB service then seed the databse by running
-```
-npm run seed-database
-```
-
 
 ## Requirements
 - Node v10.12.0
 - MongoDB v4.0.3
 
-## Development
+## Installation
+**Installation for _Development_**
 
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
+After cloning the project, go to the root directory then install all required dependencies by running
+```
 npm install
 ```
+
+If you haven't already, start your MongoDB service then seed the databse by running
+```
+npm run seed-database
+```
+
+Build the webpack bundle by running
+```
+npm run react-dev
+```
+
+Wait for the build to complete then start the server by running
+```
+npm run server-dev
+```
+and finally, on your browser go to http://localhost:3001
+
+
+## API Routes
+Each API route requires an ID
+| Endpoint       | Type | Operation                                        |
+|----------------|------|--------------------------------------------------|
+| `/details/:id` | GET  | Get all room information matching the `:id`      |
+| `/users/:id`   | GET  | Get user information for room matching the `:id` |
+
+## Development
+
 
