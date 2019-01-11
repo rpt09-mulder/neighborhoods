@@ -40,7 +40,7 @@ After cloning the project, go to the root directory then install all required de
 npm install
 ```
 
-If you haven't already, start your MongoDB service then seed the databse by running
+If you haven't already, start your MongoDB service then seed the database by running
 
 ```sh
 npm run seed-database
